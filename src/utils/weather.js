@@ -12,7 +12,7 @@ const weather = (lattitude, loggitude, callBack) => {
     if (error) {
       callBack("Unable to connect the weather service", undefined);
     } else if (response.body.error) {
-      callBack("Unable to find the location", undefined);
+      callBack("Unable to find the location weather service", undefined);
     } else {
       callBack(undefined, {
         temperature: response.body.current.temperature,
