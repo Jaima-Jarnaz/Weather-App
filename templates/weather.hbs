@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Weather</title>
+  </head>
+  <body>
+    {{>header}}
+   <section class="home-section">
+       <div class="weather-content">
+         <form class="weather-form" id="form">
+           <input class="inputSearch" type="text" id="input" placeholder="Search"/>
+           <button class="button-submit">Search</button>
+         </form>
+         <h3 id="location"></h3>
+            <h3>Today's weather condition is {{condition}}</h3>
+            <h4>Temprature is {{temprature}}</h4>
+       </div>
+   </section>
+    {{>footer}}
+
+     <script src="/js/fetchData.js"></script>
+  </body>
+</html>
