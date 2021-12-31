@@ -2,8 +2,11 @@ const path = require("path");
 const hbs = require("hbs");
 const geoCode = require("./utils/geoCode");
 const weather = require("./utils/weather");
+const forecast = require("./utils/forecast");
 const express = require("express");
 const app = express();
+
+const port = process.env.PORT || 3000;
 
 console.log(__dirname);
 const publicDir = path.join(__dirname, "../public");
@@ -46,19 +49,20 @@ app.get("/search", (req, res) => {
   });
 });
 
-//weather
+//weather forecast dynamic using api
 app.get("/weather", (req, res) => {
-  res.render("weather", {
-    temprature: 100 + " degree",
-    condition: "Not good",
-  });
-
-  // res.send({
-  //   temprature: 100 + " degree",
-  //   condition: "Not good",
+  // const searchData = req.query.location;
+  // if (!searchData)
+  //   return res.render("weather", { error: "Please Provide search item" });
+  // forecast((error, response) => {
+  //   if (error) return res.render("weather", { error: error });
+  //   res.render("weather", { temperature: response.temperature });
   // });
+  console.log(res.temperature);
+  res.render("weather");
 });
 
+//search static data
 app.get("/locations", (req, res) => {
   const data = [
     {
@@ -87,6 +91,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Listening on port 3000");
 });
