@@ -1,5 +1,9 @@
 ## Weather Application
 
+![NODE](https://place-hold.it/80x33/433/fff?text=NODE&bold)&nbsp;
+![EXPRESS](https://place-hold.it/130x33/104/fff?text=EXPRESS&bold)&nbsp;
+![HBS](https://place-hold.it/130x33/411/fff?text=HBS&bold)&nbsp;
+
 
 ## Description
 
