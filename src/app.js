@@ -85,7 +85,7 @@ app.get("/locations", (req, res) => {
 
 app.get("*", (req, res) => {
   res.render("error", {
-    error: "Sorry searched page not found!!!try another url.......",
+    error: "Sorry searched result page not found!!!Try another URL...........",
   });
 });
 
