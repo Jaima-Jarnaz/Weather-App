@@ -19,6 +19,13 @@ h3 {
   color: #443d3d;
 }
 
+#temp,
+#weather {
+  color: #8360c3;
+  font-size: 20px;
+  letter-spacing: 8px;
+}
+
 .img-weather {
   width: 400px;
   height: 400px;
